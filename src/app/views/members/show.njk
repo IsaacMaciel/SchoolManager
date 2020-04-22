@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+Member
+<div class="card">
+
+    <section 
+    class="image" style="background: url('{{member.avatar_url}}') no-repeat center center / cover; background-size:cover;background-position:center;width:100%;height:100%"></section>
+    <form   class="details show">
+
+        <h3>Aluno</h3>
+        
+        <div class="item">
+            <div>Nome Completo</div>
+            <div>{{member.name}}</div>
+        </div>
+
+
+        <div class="item">
+            <div>Aniversário</div>
+            <div>{{member.birth_date}}</div>
+        </div>
+
+        <div class="item">
+            <div>Email:</div>
+            <div>{{member.email}}</div>
+        </div>
+
+        <div class="item">
+            <div>Classe</div>
+            <div>{{member.grade_school}}</div>
+        </div>
+
+        <div class="item">
+            <div>Professor</div>
+            <div>{{member.instructor_name}}</div>
+        </div>
+
+        <div class="item">
+            <div>Carga Horária</div>
+            <div>{{member.workload}}h</div>
+        </div>
+
+        <a href="/members/{{member.id}}/edit" class="button">Editar
+        </a>
+    </form>
+</div>
+
+
+
+{% endblock content %}

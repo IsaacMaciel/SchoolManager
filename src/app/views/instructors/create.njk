@@ -1,0 +1,20 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+Instructors
+<div class="card">
+
+    <section 
+    class="image"></section>
+    <form  method="POST" action="/instructors" class="details">
+
+        <h3>Cadastro de Instrutor</h3>
+        
+    {% include 'instructors/fields.njk'%}
+
+    </form>
+</div>
+
+
+
+{% endblock content %}

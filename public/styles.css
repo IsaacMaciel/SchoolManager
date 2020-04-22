@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #7159c1;
+}
+
+* {
+    padding: 0;
+    margin:0;
+    border:0;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+}
+
+header {
+    width: 100%;
+    padding:32px;
+    background-color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.menu a + a{
+    margin: 32px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+}
+
+.menu a.active {
+    font-weight: bold;
+}
+
+.menu a::after {
+    content: "";
+    width: 0%;
+    height:3px;
+    background-color: var(--primary-color);
+    position: absolute;
+    right: 0px;
+    bottom: -3px;
+}
+
+.menu a:hover::after {
+    width: 100%;
+    transition: all 700ms cubic-bezier(0, 0, 0, 0.88);
+    
+
+}
+
+.card {
+    width: 800px;
+    min-height: 400px;
+    background-color: white;
+    margin:45px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 0px 2px 6px -2px rgba(0,0,0,0.2);
+
+   animation: up 1s ease;
+        
+}
+
+@keyframes up {
+
+    from {
+        opacity: 0;
+        transform: translateY(350px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*
+.image {
+background: url('Capturar.PNG') no-repeat center center / cover;
+}
+*/
+
+
+
+
+.details {
+    padding: 32px;
+    
+}
+
+form .details.show {
+    width: 100%;
+}
+
+.details .item {
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding: 16px 0;
+}
+
+.details .item:last-child {
+    border:none;
+}
+.details h3,
+.details .item div:nth-child(1) {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+.details .item div:nth-child(2) {
+    font-weight: bold;
+    font-size: 18px;
+    color: #555;
+}
+.details h3 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.span {
+    display: inline-block;
+    background-color:rgb(231, 228, 26);
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-top:8px;
+    color: rgb(65, 61, 61);
+    font-size: 12px;
+    line-height: 11px;
+    text-transform: uppercase;
+}
+
+/* input */
+
+input {
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    color: #555;
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 8px;
+}
+
+button[type="submit"],
+.button {
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 8px 32px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    margin-top: 22px;
+    cursor: pointer;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+select {
+    width: 100%;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+a.button {
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#button-delete  {
+    background-color: rgb(233, 66, 99);
+  
+}
+
+.delete {
+   
+    height: 0px;
+}
+
+/* table  index.njk*/
+
+.table-container {
+    display: block;
+    padding:40px;
+    box-sizing: border-box;
+}
+
+.table-container table {
+    border-spacing: 0px;
+}
+.table-container  thead tr th {
+    text-align: left;
+}
+
+td, th {
+    padding: 16px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #777;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    height: -webkit-fill-available;
+    height:82px;
+}
+
+tbody tr td:first-child span {
+    width: 48px;
+    height: 48px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow:  3px 1px 6px -4px black;
+    border: 2px solid white;
+}
+
+tbody tr td:last-child a, .table-container > a {
+    background-color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.table-container thead tr th,td {
+    text-align: center;
+}
+
+
+.table-container > a {
+    display: inline-block;
+    margin-bottom: -10px;
+}
+.table-container #new-instructor {
+    margin-bottom: -10px;
+}
+
+/* FILTER */
+.table-container .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.table-container .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    gap: 8px
+}
+.table-container .header input {
+    border: 1px solid #eee;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.table-container .header button {
+    margin:0;
+}
+.table-container .header a {
+    width: 120px;
+    margin:0;
+}
+
+/* pagination */
+
+.table-container {
+    display:grid;
+    grid-template: 64px 1fr 16px / 1fr;
+}
+.table-container .header {
+    margin:0;
+    align-self: start;
+}
+.table-container .pagination {
+    margin:0;
+    align-self: end;
+    justify-self: center;
+}
+.pagination a, .pagination span {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+}
+.pagination a:hover {
+    filter:brightness(0.3);
+    border-bottom: 1px solid var(--primary-color);
+}

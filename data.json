@@ -1,0 +1,44 @@
+{
+ "members": [
+  {
+   "id": 1,
+   "avatar": "https://criticalhits.com.br/wp-content/uploads/2020/01/inosuke.jpg",
+   "name": "Isaac Maciel de Araújo Neto",
+   "birth": 790387200000,
+   "email": "isaac_maciel@hotmail.com",
+   "school_year": "3M",
+   "workload": "40"
+  },
+  {
+   "id": 2,
+   "avatar": "https://www.google.com",
+   "name": "Gordon Clark",
+   "birth": -1811894400000,
+   "email": "projetoclark@gmail.com",
+   "school_year": "3M",
+   "workload": "10"
+  }
+ ],
+ "instructors": [
+  {
+   "id": 1,
+   "name": "Isaac Maciel Araújo",
+   "avatar": "https://vignette.wikia.nocookie.net/mario/images/5/54/Link.jpg/revision/latest/scale-to-width-down/360?cb=20160808205024&path-prefix=pt-br",
+   "birth": null,
+   "school": "Mestrado",
+   "type_class": "ead",
+   "services": "Espada,Defesa",
+   "created_at": 1586616438940
+  },
+  {
+   "id": "2",
+   "name": "Inosuke Hashimira",
+   "avatar": "https://criticalhits.com.br/wp-content/uploads/2020/01/inosuke.jpg",
+   "birth": 966902400000,
+   "school": "Ensino Médio Completo",
+   "type_class": "presencial",
+   "services": "Respiração da fera, Corte Duplo",
+   "created_at": 1586865695518
+  }
+ ]
+}

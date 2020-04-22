@@ -1,0 +1,80 @@
+  <div class="item">
+            <div>Avatar</div>
+            <input type="url" name="avatar_url" value="{{instructors.avatar_url}}"placeholder="http://">
+        </div>
+
+        <div class="item">
+            <div>Nome Completo</div>
+             <input type="text" name="name" value="{{instructors.name}}" placeholder="Digite o seu nome"/>
+        </div>
+
+
+        <div class="item">
+            <div>Idade</div>
+            <input type="date" value="{{instructors.birth_date}}" name="birth_date">
+        </div>
+
+        <div class="item">
+            <div>Grau de escolaridade</div>
+       
+            <select name="education_level">
+                <option 
+                    value="Ensino Médio Completo" 
+                    {% if instructors.education_level == 'Ensino Médio Completo' %}
+                        selected 
+                    {% endif %}> Ensino Médio Completo
+                </option>
+
+                <option 
+                    value="Ensino Superior Completo"
+                    {% if  instructors.education_level == 'Ensino Superior Completo'%}
+                        selected
+                    {% endif %}> Ensino Superior Completo
+                </option>
+
+                <option 
+                    value="Mestrado"
+                    {% if instructors.education_level == 'Mestrado' %}
+                        selected
+                    {% endif %}> Mestrado
+                </option>
+
+                <option 
+                    value="Doutorado"
+                    {% if instructors.education_level == 'Doutorado' %}
+                        selected
+                    {% endif %}> Doutorado
+                 </option>
+            </select>
+        </div>
+
+        <div class="item">
+            <div>Tipo de aula</div>
+            <span>
+                <input type="radio"
+                    name="class_type"  
+                    value="presencial"
+                    {% if instructors.class_type == 'presencial' %}
+                         checked
+                    {% endif %}>Presencial</span>
+            <span>
+                <input type="radio" 
+                    name="class_type"
+                    value="ead" 
+                    {% if instructors.class_type == 'ead' %}
+                        checked
+                    {% endif %}>A distância
+            </span>
+        </div>
+
+
+        <div class="item">
+            <div>Acompanhamento</div>
+            <div>
+                <input type="text" name="subjects_taught"   value="{{instructors.subjects_taught}}" placeholder="Digite as matérias separadas com vírgulas">
+ 
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Salvar</button>

@@ -1,0 +1,61 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+Instructors
+<div class="card">
+
+    <section 
+    class="image" style="background: url('{{instructors.avatar_url}}') no-repeat center center / cover; background-size:cover;background-position:center;width:100%;height:100%"></section>
+    <form   class="details show">
+
+        <h3>Professores</h3>
+        
+        <div class="item">
+            <div>Nome Completo</div>
+            <div>{{instructors.name}}</div>
+        </div>
+
+
+        <div class="item">
+            <div>Idade</div>
+            <div>{{instructors.birth_date}} anos</div>
+        </div>
+
+        <div class="item">
+            <div>Grau de escolaridade</div>
+            <div>{{instructors.education_level}}</div>
+        </div>
+
+        <div class="item">
+            <div>Tipo de aula</div>
+            <div>{{instructors.class_type}}</div>
+        </div>
+
+
+        <div class="item">
+            <div>Acompanhamento</div>
+            <div>
+                {% for service in instructors.subjects_taught %}
+            
+                    <span class="span">{{service}}</span>
+
+                {% endfor %}
+               
+                
+               
+                
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Desde</div>
+            <div>{{instructors.created_at}}</div>
+        </div>
+        <a href="/instructors/{{instructors.id}}/edit" class="button">Editar
+        </a>
+    </form>
+</div>
+
+
+
+{% endblock content %}
